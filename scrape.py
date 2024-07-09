@@ -104,9 +104,7 @@ def parse_company_page(url):
 
 if __name__ == "__main__":
     parser = CompanyListParser()
-    with urlopen(
-        "https://healthtech.teknologiateollisuus.fi/fi/jasenet-members-0"
-    ) as response:
+    with urlopen(BASE_URL + "/fi/jasenet-members-0") as response:
 
         parser.feed(str(response.read()))
 
